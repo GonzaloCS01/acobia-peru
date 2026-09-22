@@ -121,8 +121,8 @@ nav a:hover {
 
     background-image:
         linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.55)
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
         ),
         url("imagenes/hero-acobia-desktop.webp");
 
@@ -468,8 +468,8 @@ nav {
 
         background-image:
             linear-gradient(
-                rgba(0, 0, 0, 0.60),
-                rgba(0, 0, 0, 0.60)
+                rgba(0, 0, 0, 0.50),
+                rgba(0, 0, 0, 0.50)
             ),
             url("imagenes/hero-acobia-mobile.webp");
 
