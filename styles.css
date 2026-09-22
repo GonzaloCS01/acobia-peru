@@ -111,17 +111,41 @@ nav a:hover {
 
 /* PORTADA PRINCIPAL */
 
+/* =========================================
+   PORTADA PRINCIPAL - ESCRITORIO
+========================================= */
+
 .hero {
-    background: linear-gradient(
-        135deg,
-        var(--rojo-oscuro),
-        var(--rojo),
-        var(--verde)
-    );
+
+    /* Fotografía con capa oscura */
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("imagenes/hero-acobia-desktop.webp");
+
+    /* Configuración de la fotografía */
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    /* Distribución del contenido */
+
+    min-height: 570px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Texto y espacios */
 
     color: var(--blanco);
     text-align: center;
-    padding: 120px 20px;
+    padding: 100px 20px;
+
 }
 
 .hero h1 {
@@ -428,6 +452,43 @@ nav {
     #menu-principal a:hover {
         background-color: var(--marfil);
         color: var(--rojo);
+    }
+
+}
+
+/* =========================================
+   PORTADA PRINCIPAL - CELULARES
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        /* Fotografía vertical con capa oscura */
+
+        background-image:
+            linear-gradient(
+                rgba(0, 0, 0, 0.60),
+                rgba(0, 0, 0, 0.60)
+            ),
+            url("imagenes/hero-acobia-mobile.webp");
+
+        /* Configuración de la fotografía */
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        /* Altura y distribución */
+
+        min-height: 650px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 70px 20px;
+
     }
 
 }
