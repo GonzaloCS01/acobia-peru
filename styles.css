@@ -280,3 +280,154 @@ nav {
     }
 
 }
+
+/* =========================================
+   ACOBIA PERÚ
+   MENÚ DE NAVEGACIÓN RESPONSIVE
+========================================= */
+
+
+/* BOTÓN OCULTO EN COMPUTADORAS */
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* =========================================
+   DISEÑO PARA CELULARES
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* ENCABEZADO */
+
+    header {
+        padding: 12px 0;
+    }
+
+    .encabezado {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+    }
+
+
+    /* LOGOTIPO */
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-self: start;
+        min-width: 0;
+    }
+
+    .logo img {
+        display: block;
+        width: 190px;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* BOTÓN HAMBURGUESA */
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        background-color: var(--blanco);
+        color: var(--rojo);
+
+        border: 1px solid var(--dorado);
+        border-radius: 6px;
+
+        cursor: pointer;
+
+        justify-self: end;
+
+        transition: background-color 0.3s;
+    }
+
+
+    /* ICONO DEL MENÚ */
+
+    .menu-icono {
+        font-size: 25px;
+        line-height: 1;
+    }
+
+
+    /* INTERACCIÓN CON EL BOTÓN */
+
+    .menu-toggle:hover {
+        background-color: var(--marfil);
+    }
+
+    .menu-toggle:focus-visible {
+        outline: 3px solid var(--dorado);
+        outline-offset: 3px;
+    }
+
+
+    /* MENÚ DE NAVEGACIÓN MÓVIL */
+
+    #menu-principal {
+        display: none;
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        background-color: var(--blanco);
+
+        border-top: 1px solid var(--dorado);
+
+        padding-top: 10px;
+    }
+
+
+    /* MENÚ ABIERTO */
+
+    #menu-principal.abierto {
+        display: flex;
+    }
+
+
+    /* ENLACES DEL MENÚ */
+
+    #menu-principal a {
+        display: block;
+
+        padding: 12px 15px;
+
+        text-align: left;
+
+        font-size: 15px;
+
+        color: var(--texto);
+
+        border-bottom: 1px solid #eeeeee;
+
+        transition: background-color 0.3s;
+    }
+
+
+    /* INTERACCIÓN CON LOS ENLACES */
+
+    #menu-principal a:hover {
+        background-color: var(--marfil);
+        color: var(--rojo);
+    }
+
+}
