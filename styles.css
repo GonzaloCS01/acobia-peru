@@ -1,0 +1,262 @@
+/* =========================================
+   ACOBIA PERÚ
+   ESTILOS GENERALES DE LA LANDING PAGE
+========================================= */
+
+/* COLORES INSTITUCIONALES */
+
+:root {
+    --rojo: #8E1B1B;
+    --rojo-oscuro: #651313;
+    --dorado: #B88A1C;
+    --verde: #345544;
+    --marfil: #F8F6F0;
+    --blanco: #FFFFFF;
+    --texto: #292929;
+    --gris: #666666;
+}
+
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--marfil);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ENCABEZADO */
+
+header {
+    background-color: var(--blanco);
+    padding: 20px 0;
+    border-bottom: 3px solid var(--dorado);
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--rojo);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--rojo);
+}
+
+
+/* PORTADA PRINCIPAL */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        var(--rojo-oscuro),
+        var(--rojo),
+        var(--verde)
+    );
+
+    color: var(--blanco);
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 750px;
+    margin: 0 auto 30px;
+}
+
+
+/* BOTONES */
+
+.boton {
+    display: inline-block;
+    background-color: var(--dorado);
+    color: var(--blanco);
+    padding: 14px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 8px;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--rojo-oscuro);
+}
+
+.boton-secundario {
+    background-color: var(--verde);
+}
+
+
+/* SECCIONES GENERALES */
+
+.seccion {
+    padding: 80px 0;
+}
+
+.seccion-blanca {
+    background-color: var(--blanco);
+}
+
+.titulo-seccion {
+    color: var(--rojo);
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.descripcion-seccion {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: var(--gris);
+}
+
+
+/* TARJETAS INFORMATIVAS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: var(--blanco);
+    padding: 35px;
+    border-radius: 10px;
+    border-top: 4px solid var(--dorado);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.tarjeta h3 {
+    color: var(--rojo);
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    color: var(--gris);
+}
+
+
+/* SECCIÓN DE COOPERACIÓN */
+
+.cooperacion {
+    background-color: var(--verde);
+    color: var(--blanco);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cooperacion h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cooperacion p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: var(--rojo-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        padding: 55px 0;
+    }
+
+    .cooperacion h2 {
+        font-size: 28px;
+    }
+
+}
