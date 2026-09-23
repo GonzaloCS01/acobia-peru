@@ -543,3 +543,35 @@ nav {
     }
 
 }
+
+/* =========================================
+   ACOBIA PERÚ
+   PRESENTACIÓN DE NUESTRA MISIÓN
+========================================= */
+
+/* VERSIÓN DE ESCRITORIO */
+
+#mision .descripcion-seccion {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#mision .descripcion-seccion p + p {
+    margin-top: 22px;
+}
+
+
+/* VERSIÓN MÓVIL */
+
+@media (max-width: 768px) {
+
+    #mision .descripcion-seccion {
+        text-align: left;
+    }
+
+    #mision .descripcion-seccion p + p {
+        margin-top: 18px;
+    }
+
+}
