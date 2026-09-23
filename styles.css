@@ -492,3 +492,27 @@ nav {
     }
 
 }
+
+/* =========================================
+   PRESENTACIÓN INSTITUCIONAL
+========================================= */
+
+#nosotros .descripcion-seccion {
+    max-width: 850px;
+    text-align: left;
+    color: var(--texto);
+    margin-bottom: 0;
+}
+
+#nosotros .descripcion-seccion p {
+    margin-bottom: 18px;
+}
+
+#nosotros .descripcion-seccion p:last-child {
+    margin-bottom: 0;
+}
+
+#nosotros .descripcion-seccion strong {
+    color: var(--rojo);
+    font-weight: 600;
+}
