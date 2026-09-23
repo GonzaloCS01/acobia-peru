@@ -575,3 +575,53 @@ nav {
     }
 
 }
+
+/* =========================================
+   ACOBIA PERÚ
+   CUADRÍCULA DE LÍNEAS DE TRABAJO
+========================================= */
+
+/* DISTRIBUCIÓN EN COMPUTADORAS */
+
+.grid-lineas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* TARJETAS */
+
+.grid-lineas .tarjeta {
+    height: 100%;
+    padding: 35px;
+}
+
+/* TÍTULOS */
+
+.grid-lineas .tarjeta h3 {
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+/* SEPARACIÓN ENTRE PÁRRAFOS */
+
+.grid-lineas .tarjeta p + p {
+    margin-top: 18px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+
+    .grid-lineas {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .grid-lineas .tarjeta {
+        padding: 25px;
+    }
+
+}
