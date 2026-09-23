@@ -498,10 +498,11 @@ nav {
 ========================================= */
 
 #nosotros .descripcion-seccion {
-    max-width: 850px;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
     text-align: left;
     color: var(--texto);
-    margin-bottom: 0;
 }
 
 #nosotros .descripcion-seccion p {
@@ -515,4 +516,30 @@ nav {
 #nosotros .descripcion-seccion strong {
     color: var(--rojo);
     font-weight: 600;
+}
+
+/* INTRODUCCIÓN INSTITUCIONAL */
+
+#nosotros .descripcion-seccion p:first-child {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   QUIÉNES SOMOS - VERSIÓN MÓVIL
+========================================= */
+
+@media (max-width: 768px) {
+
+    #nosotros .descripcion-seccion {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    #nosotros .descripcion-seccion p:first-child {
+        font-size: 16px;
+        margin-bottom: 22px;
+    }
+
 }
