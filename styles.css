@@ -625,3 +625,218 @@ nav {
     }
 
 }
+
+/* =========================================
+   ACOBIA PERÚ
+   SECCIÓN DE PROYECTOS E INICIATIVAS
+========================================= */
+
+
+/* GRUPOS DE PROYECTOS */
+
+.grupo-proyectos {
+    max-width: 1100px;
+    margin: 60px auto 0;
+}
+
+.grupo-proyectos:first-of-type {
+    margin-top: 40px;
+}
+
+
+/* TÍTULOS DE LOS GRUPOS */
+
+.titulo-grupo {
+    color: var(--rojo);
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* DESCRIPCIÓN DE CADA GRUPO */
+
+.grupo-proyectos > .descripcion-seccion {
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+
+/* CUADRÍCULA DE PROYECTOS */
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* TARJETAS DE PROYECTOS */
+
+.tarjeta-proyecto {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    height: 100%;
+
+    overflow: hidden;
+
+    background-color: var(--blanco);
+
+    border-top: none;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* FOTOGRAFÍAS */
+
+.tarjeta-proyecto > img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* CONTENEDOR DE TEXTOS */
+
+.contenido-proyecto {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 30px;
+}
+
+
+/* ESTADO DEL PROYECTO */
+
+.estado-proyecto {
+    display: inline-block;
+    align-self: flex-start;
+
+    background-color: #F5EBD2;
+    color: #75520B;
+
+    padding: 6px 12px;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+
+/* TÍTULO DEL PROYECTO */
+
+.contenido-proyecto h3 {
+    color: var(--rojo);
+
+    font-size: 21px;
+    line-height: 1.4;
+
+    margin-bottom: 15px;
+}
+
+
+/* UBICACIÓN */
+
+.contenido-proyecto .ubicacion-proyecto {
+    color: var(--verde);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+
+/* PÁRRAFOS */
+
+.contenido-proyecto p {
+    color: var(--gris);
+    margin-bottom: 16px;
+}
+
+
+/* INDICADOR DE FUTURA FICHA */
+
+.enlace-proyecto {
+    display: block;
+
+    margin-top: auto;
+    padding-top: 20px;
+
+    color: var(--rojo);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ESPACIO RESERVADO PARA CABANA
+========================================= */
+
+.imagen-proyecto-pendiente {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    background-color: #E8E8E8;
+    color: #666666;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+.imagen-proyecto-pendiente span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ADAPTACIÓN A CELULARES
+========================================= */
+
+@media (max-width: 768px) {
+
+    .grupo-proyectos {
+        margin-top: 50px;
+    }
+
+    .titulo-grupo {
+        font-size: 24px;
+    }
+
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .contenido-proyecto {
+        padding: 25px;
+    }
+
+    .contenido-proyecto h3 {
+        font-size: 19px;
+    }
+
+}
