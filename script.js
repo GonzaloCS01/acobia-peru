@@ -106,3 +106,62 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+/* =========================================
+   ACOBIA PERÚ
+   BOTÓN FLOTANTE: VOLVER ARRIBA
+========================================= */
+
+// Buscar el botón en la página
+
+const botonVolverArriba = document.getElementById("volver-arriba");
+
+// Comprobar que el botón existe
+
+if (botonVolverArriba) {
+
+    // Mostrar u ocultar según el desplazamiento
+
+    function actualizarBotonVolverArriba() {
+
+        if (window.scrollY > 400) {
+
+            botonVolverArriba.classList.add("visible");
+
+        } else {
+
+            botonVolverArriba.classList.remove("visible");
+
+        }
+
+    }
+
+    // Detectar cuando el visitante se desplaza
+
+    window.addEventListener(
+        "scroll",
+        actualizarBotonVolverArriba,
+        { passive: true }
+    );
+
+    // Comprobar la posición inicial de la página
+
+    actualizarBotonVolverArriba();
+
+    // Regresar al inicio al presionar el botón
+
+    botonVolverArriba.addEventListener("click", function () {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches ? "instant" : "smooth"
+
+        });
+
+    });
+
+}
