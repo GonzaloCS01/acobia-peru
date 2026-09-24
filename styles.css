@@ -1169,3 +1169,154 @@ nav {
     }
 
 }
+
+/* =========================================
+   ACOBIA PERÚ
+   BOTÓN FLOTANTE: VOLVER ARRIBA
+========================================= */
+
+.volver-arriba {
+
+    /* Posición en la pantalla */
+
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    z-index: 1000;
+
+
+    /* Tamaño y forma */
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+
+    /* Colores institucionales */
+
+    background-color: #8B101A;
+    color: #FFFFFF;
+
+    border: 2px solid #FFFFFF;
+
+
+    /* Flecha */
+
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
+
+
+    /* Centrar la flecha */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    /* Apariencia */
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.20);
+
+
+    /* Estado inicial: oculto */
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    pointer-events: none;
+
+
+    /* Animación */
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+
+/* =========================================
+   ESTADO VISIBLE DEL BOTÓN
+========================================= */
+
+.volver-arriba.visible {
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+
+}
+
+
+/* EFECTO AL PASAR EL CURSOR */
+
+@media (hover: hover) {
+
+    .volver-arriba:hover {
+
+        background-color: #B18424;
+
+        transform: translateY(-3px);
+
+    }
+
+}
+
+
+/* EFECTO AL UTILIZAR EL TECLADO */
+
+.volver-arriba:focus-visible {
+
+    outline: 3px solid #B18424;
+    outline-offset: 3px;
+
+}
+
+
+/* =========================================
+   ADAPTACIÓN A CELULARES
+========================================= */
+
+@media (max-width: 768px) {
+
+    .volver-arriba {
+
+        width: 44px;
+        height: 44px;
+
+        bottom: 20px;
+        right: 20px;
+
+        font-size: 23px;
+
+    }
+
+}
+
+
+/* =========================================
+   ACCESIBILIDAD: MOVIMIENTO REDUCIDO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .volver-arriba {
+
+        transition: none;
+
+    }
+
+}
