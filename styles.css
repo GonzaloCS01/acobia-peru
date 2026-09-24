@@ -399,33 +399,81 @@ nav {
     }
 
 
-    /* MENÚ DE NAVEGACIÓN MÓVIL */
+    /* =========================================
+   MENÚ MÓVIL CON ANIMACIÓN
+========================================= */
 
-    #menu-principal {
-        display: none;
+#menu-principal {
 
-        grid-column: 1 / -1;
+    /* Distribución del menú */
 
-        width: 100%;
+    display: flex;
+    grid-column: 1 / -1;
 
-        flex-direction: column;
-        align-items: stretch;
+    width: 100%;
 
-        gap: 0;
+    flex-direction: column;
+    align-items: stretch;
 
-        background-color: var(--blanco);
-
-        border-top: 1px solid var(--dorado);
-
-        padding-top: 10px;
-    }
+    gap: 0;
 
 
-    /* MENÚ ABIERTO */
+    /* Apariencia */
 
-    #menu-principal.abierto {
-        display: flex;
-    }
+    background-color: var(--blanco);
+
+
+    /* Estado inicial: cerrado */
+
+    max-height: 0;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    visibility: hidden;
+
+    padding-top: 0;
+
+    border-top: 0 solid transparent;
+
+
+    /* Animación */
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        padding-top 0.35s ease,
+        border-top-width 0.35s ease,
+        visibility 0s linear 0.35s;
+
+}
+
+
+/* =========================================
+   ESTADO ABIERTO
+========================================= */
+
+#menu-principal.abierto {
+
+    max-height: 400px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    padding-top: 10px;
+
+    border-top: 1px solid var(--dorado);
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        padding-top 0.35s ease,
+        border-top-width 0.35s ease,
+        visibility 0s;
+
+}
 
 
     /* ENLACES DEL MENÚ */
@@ -1058,6 +1106,26 @@ nav {
 
     .pagina-proyecto .grid-actividades-proyecto .tarjeta {
         padding: 25px;
+    }
+
+}
+
+/* =========================================
+   ACCESIBILIDAD: REDUCIR ANIMACIONES
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    @media (max-width: 768px) {
+
+        #menu-principal {
+            transition: none;
+        }
+
+        #menu-principal.abierto {
+            transition: none;
+        }
+
     }
 
 }
