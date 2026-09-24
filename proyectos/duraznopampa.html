@@ -29,43 +29,65 @@
 
 <body>
 
-    <!-- =====================================
-         ENCABEZADO
-    ====================================== -->
+<!-- =====================================
+     ENCABEZADO RESPONSIVE
+     ACOBIA PERÚ
+====================================== -->
 
-    <header>
+<header>
 
-        <div class="contenedor encabezado">
+    <div class="contenedor encabezado">
 
-            <a href="../index.html#inicio" class="logo">
+        <!-- LOGOTIPO INSTITUCIONAL -->
 
-                <img
-                    src="../imagenes/logo-acobia.webp"
-                    alt="Acobia Perú"
-                    width="800"
-                    height="198">
+        <a href="../index.html#inicio" class="logo">
 
+            <img
+                src="../imagenes/logo-acobia.webp"
+                alt="Acobia Perú"
+                width="800"
+                height="198">
+
+        </a>
+
+
+        <!-- BOTÓN DEL MENÚ MÓVIL -->
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="menu-principal">
+
+            <span class="menu-icono">☰</span>
+
+        </button>
+
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+
+        <nav
+            id="menu-principal"
+            aria-label="Navegación principal">
+
+            <a href="../index.html#inicio">
+                Inicio
             </a>
 
-            <nav aria-label="Navegación del proyecto">
+            <a href="../index.html#proyectos">
+                Volver a proyectos
+            </a>
 
-                <a href="../index.html#inicio">
-                    Inicio
-                </a>
+            <a href="../index.html#contacto">
+                Contacto
+            </a>
 
-                <a href="../index.html#proyectos">
-                    Volver a proyectos
-                </a>
+        </nav>
 
-                <a href="../index.html#contacto">
-                    Contacto
-                </a>
+    </div>
 
-            </nav>
-
-        </div>
-
-    </header>
+</header>
 
 
     <!-- =====================================
@@ -396,6 +418,10 @@
         </div>
 
     </footer>
+
+    <!-- FUNCIONALIDAD DEL MENÚ MÓVIL -->
+
+    <script src="../script.js" defer></script>
 
 </body>
 
