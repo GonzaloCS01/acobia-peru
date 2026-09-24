@@ -1129,3 +1129,43 @@ nav {
     }
 
 }
+
+/* =========================================
+   ACOBIA PERÚ
+   CORRECCIÓN DE ANIMACIÓN DEL MENÚ MÓVIL
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Mantener el menú en una sola columna */
+
+    #menu-principal {
+
+        display: flex;
+
+        flex-direction: column;
+
+        flex-wrap: nowrap;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+    }
+
+
+    /* Evitar que los enlaces cambien de posición */
+
+    #menu-principal a {
+
+        display: block;
+
+        flex: 0 0 auto;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+    }
+
+}
